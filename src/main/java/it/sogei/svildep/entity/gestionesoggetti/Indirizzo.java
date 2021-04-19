@@ -37,8 +37,8 @@ public class Indirizzo extends BaseEntity {
     @JoinColumn(name = "FK1_TIPI_INDIRIZZO_INDIRIZZI")
     private TipoIndirizzo tipoIndirizzo;
     @ManyToOne
-    @JoinColumn(name = "FK1_SOGGETTI_INDIRIZZI")
-    private Soggetto soggetto;
+    @JoinColumn(name = "FK1_SOGGETTI_FISICI_INDIRIZZI")
+    private SoggettoFisico soggettoFisico;
     @ManyToOne
     @JoinColumn(name = "FK1_COMUNI_INDIRIZZI")
     private Comune comune;

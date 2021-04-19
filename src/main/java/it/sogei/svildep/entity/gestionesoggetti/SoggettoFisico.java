@@ -10,6 +10,7 @@ import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
 @Getter @Setter
@@ -48,4 +49,6 @@ public class SoggettoFisico extends BaseEntity {
     @OneToOne
     @JoinColumn(name = "FK1_SOGGETTI_VARIATI_SOGGETTI_FISICI")
     private SoggettoFisico soggettoNuovo;
+    @OneToMany(mappedBy = "soggettoFisico")
+    private List<Indirizzo> indirizzi;
 }
