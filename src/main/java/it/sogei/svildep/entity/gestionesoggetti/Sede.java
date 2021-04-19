@@ -33,5 +33,8 @@ public class Sede extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "FK1_INDIRIZZI_SEDI")
     private Indirizzo indirizzo;
+    @ManyToOne
+    @JoinColumn(name = "FK1_COMUNI_SEDI")
+    private Comune comune;
 
 }
